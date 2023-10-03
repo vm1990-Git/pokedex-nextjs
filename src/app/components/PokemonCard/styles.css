@@ -1,0 +1,92 @@
+.pokemon-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.288);
+  box-shadow: 1px 1px 74px 10px rgba(0, 0, 0, 0.456) inset;
+  border: 2px solid rgba(0, 0, 0, 0.164);
+  border-radius: 15%;
+  align-items: center;
+  justify-content: center;
+  width: 12em;
+  height: 12em;
+
+  &:hover {
+    box-shadow: 1px 1px 74px 10px rgba(0, 0, 0, 0.556) inset;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 10em;
+    height: 10em;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 7em;
+    height: 7em;
+  }
+}
+
+.pokemon-card--fav {
+  border: 2px solid rgb(204, 150, 13);
+  box-shadow: 1px 1px 74px 10px rgba(0, 0, 0, 0.456) inset;
+}
+
+.pokemon__img {
+  width: 140px;
+  height: 140px;
+
+  @media screen and (max-width: 800px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.pokemon__name {
+  font-size: 0.8em;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  color: silver;
+  font-weight: 500;
+  font-size: 1em;
+
+  @media screen and (max-width: 400px) {
+    font-size: .7em;
+  }
+}
+
+.pokemon__id {
+  color: silver;
+  font-weight: 500;
+  font-size: 1em;
+
+  @media screen and (max-width: 400px) {
+    font-size: .7em;
+  }
+}
+
+.custom-link {
+  text-decoration: none;
+}
+
+.icon-container {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  @media screen and (max-width: 400px) {
+    top: .5em;
+    right: .5em;
+  }
+}
+
+.heart-icon {
+  color: goldenrod;
+}

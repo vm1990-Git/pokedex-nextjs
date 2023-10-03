@@ -1,0 +1,18 @@
+body {
+    color: rgb(240, 240, 240);
+    background: radial-gradient(circle, rgba(27, 27, 27, 0.726) 20%, rgb(66, 65, 65) 90%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pokemon-container{
+    display: flex;
+    width: 80vw;
+
+    @media screen and (max-width: 800px) {
+        width: 100vw;
+    }
+}

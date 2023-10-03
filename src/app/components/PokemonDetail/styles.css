@@ -1,0 +1,125 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.pokemon-name {
+    text-align: center;
+}
+
+.detailsPage-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.detailsPage__img {
+    border-radius: 15px;
+    border: 2px solid rgb(218, 218, 218);
+    background-color: rgb(231, 229, 229);
+    box-shadow: 1px 1px 74px 10px rgba(0, 0, 0, 0.556) inset;
+    @media screen and (max-width: 500px) {
+        width: 240px;
+    }
+}
+
+.info__container {
+    display: flex;
+    justify-content: center;
+    min-width: 15em;
+    min-height: 15em;
+    max-width: 30em;
+    max-height: 30em;
+    background-color: rgba(255, 255, 255, 0.795);
+    box-shadow: 1px 1px 74px 10px rgba(0, 0, 0, 0.456) inset;
+    border: 2px solid rgb(218, 218, 218);
+    border-radius: 15px;
+
+    @media screen and (max-width: 800px) {
+        margin-inline: 0vw;
+    }
+}
+
+.info__details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 1.2em;
+    color: black;
+    list-style: none;
+    margin-left: -1.5em;
+}
+
+.info__title {
+    width: 100%;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0);
+    border-top: 1.5px solid rgba(0, 0, 0, 0.364);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.364);
+    box-shadow: 1px 1px 74px 10px rgba(175, 172, 172, 0.288) inset;
+    text-align: center;
+    color: black;
+    margin-bottom: -.7em;
+}
+
+.info__title-moves {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    text-align: center;
+    color: silver;
+    margin-bottom: -.7em;
+    border-radius: 10px;
+    padding-bottom: 1em;
+
+    @media screen and (max-width: 800px) {
+        margin-inline: 0vw;
+    }
+}
+
+.info__moves {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-direction: column;
+    flex-direction: row;
+    font-size: 18px;
+    color: silver;
+    padding-bottom: 40px;
+    list-style: none;
+    column-gap: 10px;
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-inline: 0vw;
+        font-size: .745em;
+    }
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageDetail__heart-icon {
+    color: goldenrod;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.fav-button {
+    color: goldenrod;
+    background-color: transparent;
+    border: none;
+    padding: 1em;
+    margin-top: .5em;
+
+    &:hover {
+        color: rgb(253, 186, 0);
+    }
+}

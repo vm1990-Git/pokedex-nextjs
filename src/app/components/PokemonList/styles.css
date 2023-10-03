@@ -1,0 +1,22 @@
+.pokemon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.3em;
+  width: 100vw;
+  margin-top: 2em;
+  padding: 1em;
+  overflow-y: scroll;
+  max-height: 75vh;
+
+  @media screen and (max-width: 400px) {
+    padding: 0;
+    gap: .3em;
+  }
+}
+
+.pokemon-list--empty {
+  margin-top: 10em;
+}
