@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useContext } from 'react';
-import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/Ai';
 import './styles.css'
 import { OffsetContext } from '@/app/context/OffsetContext';
 import { PokemonListContext } from '@/app/context/PokemonListContext';
@@ -36,11 +35,11 @@ const OffsetMenu = () => {
       </div>
       {limit != 1010 &&
         <div className='offset-sub-container'>
-          <button className='offset-menu__button--arrow' onClick={decreaseOffset}><AiFillLeftCircle /></button>
+          <button className='offset-menu__button--arrow' onClick={decreaseOffset}>←</button>
           <button className='offset-menu__button' onClick={offsetToFirst}>...</button>
           <span className='offset-menu__pages'>{currentPage}/{totalPages}</span>
           <button className='offset-menu__button' onClick={offsetToLast}>...</button>
-          <button className='offset-menu__button--arrow' onClick={increaseOffset}><AiFillRightCircle /></button>
+          <button className='offset-menu__button--arrow' onClick={increaseOffset}>→</button>
         </div>
       }
 

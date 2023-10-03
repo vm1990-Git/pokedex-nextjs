@@ -2,18 +2,17 @@
 import React, { useContext, useEffect } from 'react';
 import './styles.css'
 import useGetDetail from '@/app/hooks/useGetDetail';
-import { AiOutlineHeart } from 'react-icons/Ai';
 import { PokemonListContext } from '@/app/context/PokemonListContext';
 
 
 const PokemonDetail = ({ name }) => {
 
     const { detail, fetchDetail } = useGetDetail()
-    const { toggleFromFavorite  } = useContext(PokemonListContext)
+    const { toggleFromFavorite } = useContext(PokemonListContext)
 
     useEffect(() => {
         fetchDetail(name);
-    }, [name, toggleFromFavorite ]);
+    }, [name, toggleFromFavorite]);
 
     if (!detail) {
         return <div>Loading...</div>;
@@ -28,13 +27,13 @@ const PokemonDetail = ({ name }) => {
             <div className='name-container'>
                 <h2 className='pokemon-name'>{name.toUpperCase()}</h2>
                 <span>{favorite ?
-                    <AiOutlineHeart onClick={() => toggleFromFavorite (name)} size={25} className="pageDetail__heart-icon" /> :
-                    <button onClick={() => toggleFromFavorite (name)} className='fav-button'>Add to favorite</button>}
+                    <button onClick={() => toggleFromFavorite(name)} className='fav-button'>Remove to favorite</button> :
+                    <button onClick={() => toggleFromFavorite(name)} className='fav-button'>Add to favorite</button>}
                 </span>
             </div>
             <div className='detailsPage-container'>
                 {imgUrl ?
-                    (<img className='detailsPage__img' src={imgUrl} alt={imgUrl} />) :
+                    (<img className={favorite?'detailsPage__img detailsPage__img--fav':'detailsPage__img'} src={imgUrl} alt={imgUrl} />) :
                     <div>Loading image...</div>}
 
                 <div className='info__container'>

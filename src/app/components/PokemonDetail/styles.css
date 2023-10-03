@@ -21,9 +21,14 @@
     border: 2px solid rgb(218, 218, 218);
     background-color: rgb(231, 229, 229);
     box-shadow: 1px 1px 74px 10px rgba(0, 0, 0, 0.556) inset;
+
     @media screen and (max-width: 500px) {
         width: 240px;
     }
+}
+
+.detailsPage__img--fav {
+    border: 3px solid goldenrod;
 }
 
 .info__container {

@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import Link from 'next/link'
 import './styles.css'
 import { PokemonListContext } from "@/app/context/PokemonListContext";
-import { AiOutlineHeart } from 'react-icons/Ai';
 import useGetDetail from "@/app/hooks/useGetDetail";
 
 const PokemonCard = ({ pokemonName }) => {
@@ -26,7 +25,6 @@ const PokemonCard = ({ pokemonName }) => {
     return (
       <Link href={`/pokemon/${name}`} className="custom-link">
         <div className={favorite ? 'pokemon-card pokemon-card--fav' : 'pokemon-card'}>
-          <div className="icon-container">{favorite && <AiOutlineHeart size={20} className="heart-icon" />}</div>
           <img className="pokemon__img" src={imgUrl} alt={`image of ${name}`} />{" "}
           <span className="pokemon__name">{name.toUpperCase()}</span>
           <span className="pokemon__id">{`- ${id} -`}</span>
