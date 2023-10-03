@@ -30,20 +30,20 @@ const OffsetMenu = () => {
 
   return (
     <div className="offset-menu">
-      <div className='offset-sub-container'>
+      <div className='offset-sub-container offset-sub-container--filter'>
         <button className='show-filter-button' onClick={togglePokemonFilter}>Filter</button>
       </div>
       {limit != 1010 &&
-        <div className='offset-sub-container'>
-          <button className='offset-menu__button--arrow' onClick={decreaseOffset}>←</button>
+        <div className='offset-sub-container offset-sub-container--offset'>
+          <button className='offset-menu__button--arrow offset-menu__button--arrow--left' onClick={decreaseOffset}>🡆</button>
           <button className='offset-menu__button' onClick={offsetToFirst}>...</button>
           <span className='offset-menu__pages'>{currentPage}/{totalPages}</span>
           <button className='offset-menu__button' onClick={offsetToLast}>...</button>
-          <button className='offset-menu__button--arrow' onClick={increaseOffset}>→</button>
+          <button className='offset-menu__button--arrow' onClick={increaseOffset}>🡆</button>
         </div>
       }
 
-      <div className='offset-sub-container'>
+      <div className='offset-sub-container offset-sub-container--quantity'>
         <span className='offset-menu__quantity'>Quantity</span>
         <select className='offset-menu__select' onChange={(e) => changeLimit(e.target.value)}>
           <option value="12">12</option>

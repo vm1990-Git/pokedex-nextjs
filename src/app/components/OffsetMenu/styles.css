@@ -7,6 +7,7 @@
   @media screen and (max-width: 800px) {
     width: 100vw;
   }
+
 }
 
 .offset-sub-container {
@@ -14,6 +15,27 @@
   align-items: center;
   justify-content: center;
   min-width: 10em;
+  height: 2em;
+
+}
+
+.offset-sub-container--filter{
+  @media screen and (max-width: 480px) {
+    order: 1;
+  }
+}
+
+.offset-sub-container--offset{
+  @media screen and (max-width: 480px) {
+    order: 3;
+    padding-top: 1em;
+  }
+}
+
+.offset-sub-container--quantity{
+  @media screen and (max-width: 480px) {
+    order: 2;
+  }
 }
 
 .offset-menu__button {
@@ -32,12 +54,15 @@
   background-color: transparent;
   border: none;
   color: silver;
-  font-size: 1.5em;
-  margin-top: .2em;
+  font-size: 1.3em;
 
   &:hover {
     color: whitesmoke;
   }
+}
+
+.offset-menu__button--arrow--left {
+  transform: rotate(180deg) scaleY(-1);
 }
 
 .offset-menu__pages {
