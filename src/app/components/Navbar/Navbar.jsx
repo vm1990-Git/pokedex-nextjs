@@ -12,7 +12,6 @@ const Navbar = () => {
             </div>
             <ul className='nav-menu'>
                 <li><Link href={'/'}>Home</Link></li>
-                <li><Link href={'/game'}>Game</Link></li>
                 <li><Link href={'/about-us'}>About Us</Link></li>
             </ul>
         </nav>
