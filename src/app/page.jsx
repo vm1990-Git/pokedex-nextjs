@@ -12,7 +12,7 @@ const HomePage = () => {
   const { filtering, filteredPokemon } = useContext(FilterContext)
 
   return (
-    <div >
+    <div>
       {!filtering ? <OffsetMenu /> : (<div>Pokemon Found: {filteredPokemon.length} </div>)}
       <div className='pokemon-container'>
         <Filter />

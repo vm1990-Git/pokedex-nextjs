@@ -4,6 +4,7 @@
   
   width: 80vw;
   flex-wrap: wrap;
+  gap: .5em;
 
   @media screen and (max-width: 800px) {
     width: 100vw;
@@ -14,26 +15,14 @@
 .offset-sub-container {
   min-width: 10em;
   height: 2em;
-}
 
-.offset-sub-container--filter{
   @media screen and (max-width: 480px) {
-    order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
   }
 }
 
-.offset-sub-container--offset{
-  @media screen and (max-width: 480px) {
-    order: 3;
-    padding-top: 1em;
-  }
-}
-
-.offset-sub-container--quantity{
-  @media screen and (max-width: 480px) {
-    order: 2;
-  }
-}
 
 .offset-menu__button {
   background-color: transparent;

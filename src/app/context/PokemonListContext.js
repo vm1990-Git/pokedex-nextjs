@@ -19,13 +19,11 @@ export const PokemonListContextProvider = (props) => {
         if (localStorage.getItem('favorites')) {
 
             const updateFavorites = localStorage.getItem('favorites');
-            console.log(JSON.parse(updateFavorites));
             setFavoritePokemon(JSON.parse(updateFavorites));
         }
     }
 
     const toggleFromFavorite = (name) => {
-        console.log(`=> toggleFromFavorite (pokemonName=${name})`);
         let updateFavorites = [...favoritePokemon];
         const isFavorite = updateFavorites.includes(name);
         if (isFavorite) {
@@ -33,20 +31,17 @@ export const PokemonListContextProvider = (props) => {
         } else {
             updateFavorites.push(name);
         }
-        console.log('Favorites Pokemon: ', updateFavorites);
         localStorage.setItem('favorites', JSON.stringify(updateFavorites))
         setFavoritePokemon(updateFavorites);
     }
 
 
     const updatePokemonList = async () => {
-        console.log('=> updatePokemonList()')
         const newPokemonList = await getPokemonList(limit, offset)
         setPokemonList(newPokemonList)
     }
 
     const updatePokemonDetail = async (name) => {
-        // console.log(`=> updatePokemonDetail ( pokemonName=${name} )`)
         try {
             const detail = await getPokemonDetail(name);
             const isFavorite = checkFavorites(name);
@@ -63,7 +58,6 @@ export const PokemonListContextProvider = (props) => {
     };
 
     const checkFavorites = (pokemonName) => {
-        // console.log(`=> checkFavorites ( pokemonName=${pokemonName} )`)
         if (favoritePokemon.includes(pokemonName)) {
             return true;
         }

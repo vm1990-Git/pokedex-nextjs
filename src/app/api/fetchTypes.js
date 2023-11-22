@@ -1,5 +1,4 @@
 const fetchTypes = async () => {
-    console.log('=> fetchTypes()');
     const controller = new AbortController();
     try {
       const response = await fetch('https://pokeapi.co/api/v2/type', {

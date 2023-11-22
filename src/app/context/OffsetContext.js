@@ -19,19 +19,16 @@ export const OffsetContextProvider = (props) => {
     } = useContext(PokemonListContext)
 
     const offsetToFirst = () => {
-        console.log('useChangeOffset: goToFirst');
         const updateOffset = 0;
         setOffset(updateOffset);
     };
 
     const offsetToLast = () => {
-        console.log('useChangeOffset: goToLast');
         const updateOffset = pokemonQuantity - parseInt(limit);
         setOffset(updateOffset);
     };
 
     const increaseOffset = () => {
-        console.log('useChangeOffset: increaseOffest');
         const updateOffset = parseInt(offset) + parseInt(limit);
         if (updateOffset > pokemonQuantity + limit) {
             offsetToFirst();
@@ -39,7 +36,6 @@ export const OffsetContextProvider = (props) => {
     };
 
     const decreaseOffset = () => {
-        console.log('useChangeOffset: decreaseOffest');
         const updateOffset = offset - limit;
         if (updateOffset < 0) {
             offsetToLast();

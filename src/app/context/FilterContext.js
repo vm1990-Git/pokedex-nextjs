@@ -20,7 +20,6 @@ export const FilterContextProvider = (props) => {
     const { getTypes, getPokemonList, getPokemonByType } = useApi()
 
     const togglePokemonFilter = () => {
-        console.log(isPokemonFilterVisible)
         setIsPokemonFilterVisible(!isPokemonFilterVisible);
     }
 
@@ -84,7 +83,6 @@ export const FilterContextProvider = (props) => {
     }
 
     const filterPokemon = async () => {
-        console.log(`=> filterPokemon(${searchText})`);
         const checkedTypes = getCheckedTypes();
 
 
@@ -115,7 +113,6 @@ export const FilterContextProvider = (props) => {
     }
 
     const handleTypeChange = (updatedType) => {
-        console.log(`=> handleTypeChange(${updatedType})`);
         const updatedTypes = types.map((type) => {
             if (type.name === updatedType.name) {
                 return { ...type, checked: !type.checked };
@@ -127,13 +124,11 @@ export const FilterContextProvider = (props) => {
     };
 
     const handleSubmitFilter = (e) => {
-        console.log('=> handleSubmitFilter()');
         e.preventDefault();
         filterPokemon()
     };
 
     const handleClearFilter = async (e) => {
-        console.log(`=> handleClearFilter()`);
         e.preventDefault()
         setSearchText('')
         toggleTypesOff()
@@ -143,34 +138,6 @@ export const FilterContextProvider = (props) => {
         setFiltering(false)
         setShowOnlyFavorites(false)
     };
-
-    const filterLog = () => {
-        console.log('=> filterLog()')
-        const tableData = Array.isArray(types)
-            ? types.map((type) => ({
-                Name: type.name,
-                Checked: type.checked,
-            }))
-            : [];
-
-        console.log('--- FILTER SETTINGS --- ');
-        console.log(`   filter name: ${searchText}`);
-        console.log(`   favorites Only: ${showOnlyFavorites}`);
-        console.log('   filter type: ');
-
-
-        if (tableData.length > 0) {
-            console.table(tableData);
-        } else {
-            console.log('   no types for display');
-        }
-    }
-
-    useEffect(() => {
-        // LOGS
-        filterLog()
-        console.log(filteredPokemon)
-    }, [searchText, types]);
 
     useEffect(() => {
         setPokemonList(filteredPokemon)

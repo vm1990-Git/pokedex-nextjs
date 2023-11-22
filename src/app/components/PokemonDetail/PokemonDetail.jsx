@@ -20,7 +20,6 @@ const PokemonDetail = ({ name }) => {
 
     const { id, height, weight, base_experience, sprites, favorite, stats, moves, types } = detail;
     const imgUrl = sprites.other['official-artwork'].front_default
-    console.log(detail)
 
     return (
         <div className='page-container'>
