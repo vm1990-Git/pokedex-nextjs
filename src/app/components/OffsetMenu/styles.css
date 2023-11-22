@@ -1,7 +1,8 @@
 .offset-menu {
   display: flex;
-  justify-content: space-around;
   
+  justify-content: space-around;
+
   width: 80vw;
   flex-wrap: wrap;
   gap: .5em;
@@ -22,7 +23,6 @@
     width: 100vw;
   }
 }
-
 
 .offset-menu__button {
   background-color: transparent;
@@ -45,10 +45,6 @@
   &:hover {
     color: whitesmoke;
   }
-}
-
-.offset-menu__button--arrow--left {
-  transform: rotate(180deg) scaleY(-1);
 }
 
 .offset-menu__pages {
