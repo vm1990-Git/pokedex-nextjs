@@ -43,6 +43,7 @@ export const OffsetContextProvider = (props) => {
     };
 
     const changeLimit = (newLimit) => {
+        setOffset(0)
         const updateLimit = newLimit;
         setLimit(updateLimit);
     };

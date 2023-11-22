@@ -24,6 +24,10 @@
   }
 }
 
+.offset-sub-container--offset{
+  order: 2;
+}
+
 .offset-menu__button {
   background-color: transparent;
   border: none;
