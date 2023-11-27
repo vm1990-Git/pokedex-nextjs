@@ -1,0 +1,29 @@
+.footer__container {
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    padding-top: 0.3rem;
+    bottom: 0;
+    box-shadow: -1px 2px 5px 3px rgba(0, 0, 0, 0.25) inset;
+}
+
+.footer__social {
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    justify-content: center;
+    transform: translateX(-0.75rem);
+}
+
+.footer__social__link--github {
+    cursor: pointer;
+    color: black;
+}
+
+.footer__social__link--linkedin{
+    cursor: pointer;
+    color: #0077b5;
+
+}

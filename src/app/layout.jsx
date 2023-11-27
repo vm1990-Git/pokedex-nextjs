@@ -4,6 +4,7 @@ import './global.css'
 import { FilterContextProvider } from './context/FilterContext'
 import { PokemonListContextProvider } from './context/PokemonListContext'
 import { OffsetContextProvider } from './context/OffsetContext'
+import Footer from './components/Footer/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
             <OffsetContextProvider>
               <Navbar />
               {children}
+              <Footer/>
             </OffsetContextProvider>
           </FilterContextProvider>
         </PokemonListContextProvider>
