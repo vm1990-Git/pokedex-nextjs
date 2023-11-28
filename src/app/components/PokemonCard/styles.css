@@ -58,7 +58,7 @@
   font-size: 1em;
 
   @media screen and (max-width: 480px) {
-    font-size: .7em;
+    font-size: 12px;
   }
 }
 
@@ -68,7 +68,7 @@
   font-size: 1em;
 
   @media screen and (max-width: 480px) {
-    font-size: .7em;
+    font-size: 12px;
   }
 }
 
