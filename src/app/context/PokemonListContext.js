@@ -69,24 +69,6 @@ export const PokemonListContextProvider = (props) => {
     }, [])
 
     useEffect(() => {
-        if (pokemonList.length !== 0) {
-            console.group('Update Pokemon List:');
-
-            const chunkSize = 1000; //max log in table allowed is 1000
-            for (let i = 0; i < pokemonList.length; i += chunkSize) {
-                const chunk = pokemonList.slice(i, i + chunkSize);
-                console.table(
-                    chunk.map((pokemon) => ({
-                        Name: pokemon.name,
-                    }))
-                );
-            }
-
-            console.groupEnd();
-        }
-    }, [pokemonList]);
-
-    useEffect(() => {
         updatePokemonList()
     }, [offset, limit])
 

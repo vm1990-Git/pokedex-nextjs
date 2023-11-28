@@ -1,23 +1,47 @@
 .pokemon-filter {
     display: flex;
     flex-direction: column;
-    width: 10em;
+    min-width: 10em;
     box-shadow: 1px 1px 14px 5px rgba(0, 0, 0, 0.192) inset;
-    padding: 1em;
-    margin-left: 0;
+    padding: .5em;
     margin-top: 2em;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #444;
     z-index: 999;
+    font-size: 1.1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 2em;
 
     @media screen and (max-width: 800px) {
-        margin-inline: 0vw;
-        z-index: 999;
+        width: 7em;
     }
 
-    @media screen and (max-width: 400px) {
-        max-width: 7em;
+    @media screen and (max-width: 480px) {
+        margin-top: 1em;
+        gap: 0em;
+        min-width: 6em;
     }
+}
+
+.pokemon-filter::-webkit-scrollbar {
+    width: 6px;
+}
+
+.pokemon-filter::-webkit-scrollbar-track {
+    background-color: rgb(94, 93, 93);
+    border-radius: 6px;
+}
+
+.pokemon-filter::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+/* Estilos para Firefox */
+.pokemon-filter {
+    scrollbar-width: thin;
+    scrollbar-color: #888 rgb(94, 93, 93);
 }
 
 .pokemon-filter--hidden {
@@ -26,7 +50,7 @@
 
 .filter__name {
     width: 8em;
-    height: 1.3em;
+    height: 1.2em;
     background-color: rgb(116, 114, 114, 0.65);
     border: none;
     border-radius: 5px;
@@ -34,21 +58,28 @@
     font-size: 1.1em;
     text-align: center;
     align-self: center;
-    margin-top: .5em;
 
     &::placeholder {
         color: silver
     }
 
-    @media screen and (max-width: 400px) {
-        max-width: 7em;
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+        max-width: 6em;
     }
 }
 
 .filter__type {
+    font-size: 1em;
+
     &:hover {
         color: whitesmoke;
     }
+
+    @media screen and (max-width: 480px) {
+        font-size: 13px;
+    }
+
 }
 
 .filter__checkbox {
@@ -77,13 +108,24 @@
     background-color: transparent;
     border: none;
     color: silver;
-    font-size: 1.2em;
-    margin: .1rem;
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     border: 1px solid grey;
-    border-radius: 10%;
+    border-radius: 5px;
 
     &:hover {
         background-color: rgb(116, 114, 114, 0.65);
     }
 
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
+    }
+}
+
+.filter__types__container {
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 1px 1px 14px 5px rgba(0, 0, 0, 0.25) inset;
+    margin-bottom: .5em;
 }

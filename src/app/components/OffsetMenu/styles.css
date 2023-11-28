@@ -1,43 +1,21 @@
 .offset-menu {
   display: flex;
-  
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10vw;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  top: 4.5em;
 
-  width: 80vw;
-  flex-wrap: wrap;
-  gap: .5em;
-
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 480px) {
     width: 100vw;
   }
-
 }
 
 .offset-sub-container {
-  min-width: 10em;
-  height: 2em;
-
-  @media screen and (max-width: 480px) {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-  }
-}
-
-.offset-sub-container--offset{
-  order: 2;
-}
-
-.offset-menu__button {
-  background-color: transparent;
-  border: none;
-  color: silver;
-  font-size: 1.5em;
-  margin-inline: -.2em;
-
-  &:hover {
-    color: whitesmoke;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .offset-menu__button--arrow {
@@ -45,6 +23,7 @@
   border: none;
   color: silver;
   font-size: 1.3em;
+  transform: translateY(.1em);
 
   &:hover {
     color: whitesmoke;
@@ -54,22 +33,16 @@
 .offset-menu__pages {
   color: silver;
   font-size: 1.2em;
-  padding-top: .2em;
-}
-
-.offset-menu__quantity {
-  color: silver;
-  font-size: 1.2em;
-  margin-right: .5em;
 }
 
 .offset-menu__select {
-  background-color: rgb(116, 114, 114);
-  color: silver;
+  background-color: silver;
+  color: rgb(116, 114, 114);
+  ;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
 
   &:hover {
     background-color: rgb(221, 218, 218);
@@ -78,12 +51,12 @@
 }
 
 .show-filter-button {
-  background-color: rgb(116, 114, 114);
-  color: silver;
+  background-color: silver;
+  color: rgb(116, 114, 114);
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.1em;
   border: none;
 
   &:hover {

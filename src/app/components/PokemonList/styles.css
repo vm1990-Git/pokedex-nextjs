@@ -1,21 +1,40 @@
 .pokemon-list {
   display: flex;
   justify-content: center;
-  align-items: center;
   align-content: flex-start;
   flex-wrap: wrap;
   gap: 1.3em;
-  width: 100vw;
   margin-top: 2em;
-  padding: 1em;
   overflow-y: scroll;
-  max-height: 75vh;
+  padding: 2em;
+  max-width: 90em;
 
   @media screen and (max-width: 480px) {
+    width: 100vw;
     padding: 0;
     margin-top: 1em;
     gap: .5em;
   }
+}
+
+.pokemon-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pokemon-list::-webkit-scrollbar-track {
+  background-color: rgb(94, 93, 93);
+  border-radius: 6px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+/* Estilos para Firefox */
+.pokemon-list {
+  scrollbar-width: thin;
+  scrollbar-color: #888 rgb(94, 93, 93);
 }
 
 .pokemon-list--empty {

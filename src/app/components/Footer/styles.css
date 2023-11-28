@@ -2,28 +2,37 @@
     position: fixed;
     width: 100vw;
     z-index: 10;
-    padding-top: 0.3rem;
     bottom: 0;
-    box-shadow: -1px 2px 5px 3px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: -1px 2px 10px 0px rgba(0, 0, 0, 0.25) inset;
+    background: rgb(66, 65, 65);
+    background: linear-gradient(356deg, rgba(66, 65, 65, 1) 20%, rgba(66, 65, 65, 0.8) 90%);
 }
 
 .footer__social {
     font-size: 0.875rem;
     font-weight: 600;
     display: flex;
-    gap: 0.5rem;
-    padding: 0.25rem;
     justify-content: center;
-    transform: translateX(-0.75rem);
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.2rem;
 }
 
 .footer__social__link--github {
-    cursor: pointer;
     color: black;
+    transform: translateY(.1em);
+
+    :hover {
+        color: whitesmoke;
+    }
 }
 
-.footer__social__link--linkedin{
-    cursor: pointer;
+.footer__social__link--linkedin {
     color: #0077b5;
+    transform: translateY(.1em);
+
+    :hover {
+        color: whitesmoke;
+    }
 
 }

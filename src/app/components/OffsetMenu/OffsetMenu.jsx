@@ -7,11 +7,10 @@ import { PokemonListContext } from '@/app/context/PokemonListContext';
 import { FilterContext } from '@/app/context/FilterContext';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
-
 const OffsetMenu = () => {
   const {
-    offsetToFirst,
-    offsetToLast,
+    // offsetToFirst,
+    // offsetToLast,
     increaseOffset,
     decreaseOffset,
     changeLimit,
@@ -20,24 +19,30 @@ const OffsetMenu = () => {
   } = useContext(OffsetContext);
 
   const {
-
     togglePokemonFilter
   } = useContext(FilterContext);
-
 
   const {
     limit,
   } = useContext(PokemonListContext)
 
-
   return (
     <div className="offset-menu">
-      <div className='offset-sub-container offset-sub-container--filter'>
+      <div className='offset-sub-container'>
         <button className='show-filter-button' onClick={togglePokemonFilter}>Filter</button>
       </div>
 
-      <div className='offset-sub-container offset-sub-container--quantity'>
-        <span className='offset-menu__quantity'>Quantity</span>
+      {limit != 1010 &&
+        <div className='offset-sub-container'>
+          <button className='offset-menu__button--arrow' onClick={decreaseOffset}><FaArrowAltCircleLeft /></button>
+          {/* <button className='offset-menu__button' onClick={offsetToFirst}>...</button> */}
+          <span className='offset-menu__pages'>{currentPage}/{totalPages}</span>
+          {/* <button className='offset-menu__button' onClick={offsetToLast}>...</button> */}
+          <button className='offset-menu__button--arrow' onClick={increaseOffset}><FaArrowAltCircleRight /></button>
+        </div>
+      }
+
+      <div className='offset-sub-container'>
         <select className='offset-menu__select' onChange={(e) => changeLimit(e.target.value)}>
           <option value="12">12</option>
           <option value="20">20</option>
@@ -47,17 +52,6 @@ const OffsetMenu = () => {
           <option value="1010">All</option>
         </select>
       </div>
-
-      {limit != 1010 &&
-        <div className='offset-sub-container offset-sub-container--offset'>
-          <button className='offset-menu__button--arrow' onClick={decreaseOffset}><FaArrowAltCircleLeft /></button>
-          <button className='offset-menu__button' onClick={offsetToFirst}>...</button>
-          <span className='offset-menu__pages'>{currentPage}/{totalPages}</span>
-          <button className='offset-menu__button' onClick={offsetToLast}>...</button>
-          <button className='offset-menu__button--arrow' onClick={increaseOffset}><FaArrowAltCircleRight /></button>
-
-        </div>
-      }
     </div>
   )
 

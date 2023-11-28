@@ -13,8 +13,8 @@ const HomePage = () => {
 
   return (
     <div>
-      {!filtering ? <OffsetMenu /> : (<div>Pokemon Found: {filteredPokemon.length} </div>)}
       <div className='pokemon-container'>
+        {!filtering ? <OffsetMenu /> : (<div>Pokemon Found: {filteredPokemon.length} </div>)}
         <Filter />
         <PokemonList />
       </div>

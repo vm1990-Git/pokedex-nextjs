@@ -10,9 +10,13 @@ body {
 
 .pokemon-container {
     display: flex;
-    width: 80vw;
+    justify-content: center;
+    margin-top: 6em;
+    height: 85vh;
+    overflow-y: hidden;
+    width: 95vw;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 480px) {
         width: 100vw;
     }
 }
