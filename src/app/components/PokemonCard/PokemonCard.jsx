@@ -14,7 +14,11 @@ const PokemonCard = ({ pokemonName }) => {
   }, [pokemonName]);
 
   if (!detail) {
-    return <li>Loading...</li>;
+    return (
+      <div className="pokemon-card">
+        <li>Loading...</li>
+      </div>
+    )
   }
 
   const { name, id, favorite } = detail;
