@@ -52,8 +52,7 @@
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   color: silver;
-  font-weight: 500;
-  font-size: 1em;
+  font-size: 16px;
 
   @media screen and (max-width: 480px) {
     font-size: 12px;
@@ -62,8 +61,7 @@
 
 .pokemon__id {
   color: silver;
-  font-weight: 500;
-  font-size: 1em;
+  font-size: 16px;
 
   @media screen and (max-width: 480px) {
     font-size: 12px;
